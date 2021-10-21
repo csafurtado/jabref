@@ -1,0 +1,21 @@
+-> Tabela de decições/condições
+
+| Decisão | Condição | Situação para TRUE  | Situação para FALSE  |
+|---------|----------|---------------------|----------------------|
+|    1    | toCheck == NULL | toCheck == NULL | toCheck != NULL |
+|    1    | toCheck.isEmpty() | toCheck.isEmpty() | !toCheck.isEmpty() |
+|    2    | toCheck.charAt(0) == '{' | toCheck.charAt(0) == '{' | toCheck.charAt(0) != '{' |
+|    2    | toCheck.charAt(toCheck.length() - 1) == '}' | toCheck.charAt(toCheck.length() - 1) == '}' | toCheck.charAt(toCheck.length() - 1) == '}' |
+|    3    | c == '{' | c == '{' | c != '{' |
+|    4    | brackets == 0 | brackets == 0  | brackets != 0 |
+|    3    | c == '}' | c == '}' | c != '}' |
+
+
+-> Tabela de caso de testes
+
+| Caso de Teste | Entrada | Saída |
+|---------------|---------|-------|
+|       1       |   "}{"  | FALSE |
+|       2       |  "}a{"  | FALSE |
+|       3       |  "}a{banana}a{"  | FALSE |
+|       4       |  "{a}banana{a}"  | FALSE |
